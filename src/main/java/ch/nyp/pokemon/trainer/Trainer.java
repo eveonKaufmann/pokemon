@@ -15,10 +15,10 @@ public class Trainer {
 
 	}
 	
-  public Trainer(String name, int wins, int losses, ArrayList<Pokemon> pokemonList) {
+  public Trainer(String name, ArrayList<Pokemon> pokemonList) {
     this.name = name;
-    this.wins = wins;
-    this.losses = losses;
+    this.wins = 0;
+    this.losses = 0;
     this.pokemonList = pokemonList;
   }
 
@@ -46,5 +46,12 @@ public class Trainer {
   public void setPokemonList(ArrayList<Pokemon> pokemonList) {
     this.pokemonList = pokemonList;
   }
+
+  @Override
+  public String toString() {
+    return "Trainer [name=" + name + ", wins=" + wins + ", losses=" + losses + ", pokemonList=" + pokemonList + "]";
+  }
+  
+  
 
 }
